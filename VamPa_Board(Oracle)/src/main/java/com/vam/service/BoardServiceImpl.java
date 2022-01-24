@@ -34,8 +34,7 @@ public class BoardServiceImpl implements BoardService {
     
     /* 게시판 수정 */
     @Override
-    public int modify(BoardVO board) {
-        
+    public int modify(BoardVO board) {        
         return mapper.modify(board);
     }
 

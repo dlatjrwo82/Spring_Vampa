@@ -57,6 +57,10 @@ public class BoardController {
         model.addAttribute("pageInfo", bservice.getPage(bno));
     }
     
+//    RedirectAttributes는 리다이렉트가 발생하기 전에 모든 플래시 속성을 세션에 복사한다. 
+//    리다이렉션 이후에는 저장된 플래시 속성을 세션에서 모델로 이동시킨다. 
+//    헤더에 파라미터를 붙이지 않기 때문에 URL에 노출되지 않는다.
+//    https://blog.naver.com/allkanet72/220964699929
     /* 페이지 수정 */
     @PostMapping("/modify")
     public String boardModifyPOST(BoardVO board, RedirectAttributes rttr) {
@@ -64,6 +68,5 @@ public class BoardController {
         rttr.addFlashAttribute("result", "modify success"); 
         return "redirect:/board/list";
     }
-    
     
 }

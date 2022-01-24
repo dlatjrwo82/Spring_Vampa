@@ -101,14 +101,20 @@
     $(document).ready(function(){    
  		/* let result = "${result}"; */
  		let result = '<c:out value="${result}"/>';
+ 		
  		checkAlert(result);
+ 		console.log(result);
+ 		
  		function checkAlert(result){
  			if(result === ''){
  				return;
  			}
  			if(result === "enrol success"){
  				alert("등록이 완료되었습니다.");
- 			}
+ 			} 			
+ 			if(result === "modify success"){
+ 	            alert("수정이 완료되었습니다.");
+ 	        } 			
  		}
     });
     
